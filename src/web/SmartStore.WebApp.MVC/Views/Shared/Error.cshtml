@@ -1,0 +1,23 @@
+﻿@model SmartStore.Model.View.ErrorViewModel
+@{
+    ViewData["Title"] = "Error";
+}
+
+@{
+    if (Model == null)
+    {
+        <div>
+            <h2>Ooops! An error has occurred.... Our team will be notified and we will correct it soon!</h2>
+        </div>
+    }
+    else
+    {
+        ViewData["Title"] = Model.Title;
+
+        <div>
+            <h2>@Html.Raw(Model.Message)</h2>
+        </div>
+
+    }
+}
+
